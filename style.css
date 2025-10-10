@@ -1,0 +1,96 @@
+body{
+    background: #0b0f14;
+    color: #e6e9ef;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 24px;
+}
+
+.profile-card{
+    display: flex;
+    gap:18px;
+    align-items: center;
+    background: #11161d;
+    border: 1px solid #1f2937;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.profile-card .avatar{
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #1f2937;
+}
+
+.profile-card .name{
+    margin: 0;
+    font-size: 28px;
+}
+
+.profile-card .role{
+    margin: 4px 0 8px;
+    color: #9aa4b2;
+}
+.profile-card .links a{
+    color:#e6e9ef;
+    text-decoration: none;
+}
+
+.profile-card .links a:hover{
+    text-decoration: underline;
+}
+.cv-section{
+    background: #11161d;
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.cv-section h2 {
+  margin-top: 0;
+  font-size: 22px;
+  border-bottom: 1px solid #1f2937;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+}
+
+.job h3 {
+  margin: 0 0 4px 0;
+}
+
+.job ul {
+  margin: 0 0 12px 20px;
+  padding: 0;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  background: #1f2937;
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+
+@media (max-width: 600px) {
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-card .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
