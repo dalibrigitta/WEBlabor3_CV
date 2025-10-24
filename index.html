@@ -1,140 +1,159 @@
 <!DOCTYPE html>
 <html lang="hu">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dali Brigitta Renáta - Portfólió / CV</title>
-    <meta name="description" content="Dali Brigitta Renáta portfólió és önéletrajz – Informatika szakos hallgató, tapasztalat Laravel, Flutter, HTML, CSS, JavaScript terén.">
-    <meta name="color-scheme" content="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dali Brigitta Renáta - Portfólió / CV</title>
+<meta name="description" content="Dali Brigitta Renáta portfólió és önéletrajz – Informatika szakos hallgató, tapasztalat Laravel, Flutter, HTML, CSS, JavaScript terén.">
+<meta name="color-scheme" content="dark">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <!-- ikonok -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<header class="top-bar" role="banner">
+  <div class="top-inner">
+    <div class="brand">
+      <h1>Dali Brigitta Renáta</h1>
+    </div>
 
-    
-    <link rel="stylesheet" href="style.css">
-  </head>
+    <nav role="navigation" class="main-nav" aria-label="Fő navigáció">
+      <a href="#about" data-lang="hu">Bemutatkozás</a>
+      <a href="#about" data-lang="en" style="display:none;">About Me</a>
 
-  <body>
-    <!-- header -->
-    <header class="top-bar" role="banner">
-      <div class="top-inner">
-        <div class="brand">
-          <h1>Dali Brigitta Renáta</h1>
-        </div>
-        <nav role="navigation" class="main-nav" aria-label="Fő navigáció">
-          <a href="#about">Bemutatkozás</a>
-          <a href="#experience">Tapasztalat</a>
-          <a href="#education">Oktatás</a>
-          <a href="#skills">Készségek</a>
-          <a href="#hobbies">Hobbik</a>
-          <a href="#contact">Kapcsolat</a>
-        </nav>
+      <a href="#experience" data-lang="hu">Tapasztalat</a>
+      <a href="#experience" data-lang="en" style="display:none;">Experience</a>
+
+      <a href="#education" data-lang="hu">Oktatás</a>
+      <a href="#education" data-lang="en" style="display:none;">Education</a>
+
+      <a href="#skills" data-lang="hu">Készségek</a>
+      <a href="#skills" data-lang="en" style="display:none;">Skills</a>
+
+      <a href="#hobbies" data-lang="hu">Hobbik</a>
+      <a href="#hobbies" data-lang="en" style="display:none;">Hobbies</a>
+
+      <a href="#contact" data-lang="hu">Kapcsolat</a>
+      <a href="#contact" data-lang="en" style="display:none;">Contact</a>
+    </nav>
+
+    <div class="lang-switcher">
+      <button id="lang-hu" class="active">HU</button>
+      <button id="lang-en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="app" role="main">
+
+  <section class="profile-card card" id="profile">
+    <img class="avatar" src="profile.jpg" alt="Profilkép">
+    <div class="meta">
+      <h1 class="name">Dali Brigitta Renáta</h1>
+      <p class="role" data-lang="hu">Informatika szakos egyetemista</p>
+      <p class="role" data-lang="en" style="display:none;">Computer Science student</p>
+      <div class="links">
+        <a href="mailto:dalibrigitta3@gmail.com" target="_blank" rel="noopener">
+          <i class="fa-solid fa-envelope"></i> Email
+        </a>
+        <a href="https://github.com/dalibrigitta" target="_blank" rel="noopener">
+          <i class="fa-brands fa-github"></i> Github
+        </a>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <main id="app" role="main">
-    
-      <section class="profile-card card" id="profile">
-        <img class="avatar" src="profile.jpg" alt="Profilkép">
-        <div class="meta">
-          <h1 class="name">Dali Brigitta Renáta</h1>
-          <p class="role">Informatika szakos egyetemista</p>
-          <div class="links">
-            <a href="mailto:dalibrigitta3@gmail.com" target="_blank" rel="noopener">
-              <i class="fa-solid fa-envelope"></i> Email
-            </a>
-            <a href="https://github.com/dalibrigitta" target="_blank" rel="noopener">
-              <i class="fa-brands fa-github"></i> Github
-            </a>
-          </div>
-        </div>
-      </section>
+  <section class="cv-section card" id="about">
+    <h2><i class="fa-solid fa-user"></i> <span data-lang="hu">Bemutatkozás</span><span data-lang="en" style="display:none;">About Me</span></h2>
+    <p data-lang="hu">Harmadéves Informatika szakos hallgató vagyok az UMFST egyetemen Marosvásárhelyen. Szeretem a webfejlesztést és kísérletezni a CSS-sel, hogy egyedi, látványos felületeket hozzak létre.</p>
+    <p data-lang="en" style="display:none;">I am a third-year Computer Science student at UMFST, Târgu Mureș. I enjoy web development and experimenting with CSS to create unique, visually appealing interfaces.</p>
+  </section>
 
-      <!-- bemutatkozas,rovid leiras -->
-      <section class="cv-section card" id="about">
-        <h2><i class="fa-solid fa-user"></i> Bemutatkozás</h2>
-        <p>Harmadéves Informatika szakos hallgató vagyok az UMFST egyetemen Marosvásárhelyen.
-          Szeretem a webfejlesztést és kísérletezni a CSS-sel, hogy egyedi, látványos felületeket hozzak létre.
-        </p>
-      </section>
+  <section class="cv-section card" id="experience">
+    <h2><i class="fa-solid fa-briefcase"></i> <span data-lang="hu">Tapasztalat</span><span data-lang="en" style="display:none;">Experience</span></h2>
 
-      <!-- tapasztalatok egyetemen es erasmus -->
-      <section class="cv-section card" id="experience">
-        <h2><i class="fa-solid fa-briefcase"></i> Tapasztalat</h2>
+    <div class="job">
+      <h3 data-lang="hu">Webfejlesztő gyakornok - Erasmus+ program</h3>
+      <h3 data-lang="en" style="display:none;">Web Development Intern - Erasmus+ Program</h3>
+      <ul>
+        <li data-lang="hu">Laravel és PHP alapok</li>
+        <li data-lang="en" style="display:none;">Basics of Laravel and PHP</li>
+        <li data-lang="hu">Frontend fejlesztés HTML, CSS és minimális JavaScript használatával</li>
+        <li data-lang="en" style="display:none;">Frontend development using HTML, CSS and minimal JavaScript</li>
+      </ul>
+    </div>
 
-        <div class="job">
-          <h3>Webfejlesztő gyakornok - Erasmus+ program</h3>
-          <ul>
-            <li>Laravel és PHP alapok</li>
-            <li>Frontend fejlesztés HTML, CSS és minimális JavaScript használatával</li>
-          </ul>
-        </div>
+    <div class="job">
+      <h3 data-lang="hu">Mobilos hallgatói projekt - Flutter</h3>
+      <h3 data-lang="en" style="display:none;">Student Mobile Project - Flutter</h3>
+      <ul>
+        <li data-lang="hu">Egyszerű alkalmazás készítése Flutter keretrendszerrel</li>
+        <li data-lang="en" style="display:none;">Creating a simple app with Flutter framework</li>
+        <li data-lang="hu">UI tervezés és komponensek testreszabása</li>
+        <li data-lang="en" style="display:none;">UI design and component customization</li>
+      </ul>
+    </div>
 
-        <div class="job">
-          <h3>Mobilos hallgatói projekt - Flutter</h3>
-          <ul>
-            <li>Egyszerű alkalmazás készítése Flutter keretrendszerrel</li>
-            <li>UI tervezés és komponensek testreszabása</li>
-          </ul>
-        </div>
+    <div class="job">
+      <h3 data-lang="hu">Java hallgatói projekt</h3>
+      <h3 data-lang="en" style="display:none;">Student Java Project</h3>
+      <ul>
+        <li data-lang="hu">Egyszerű projekt Java nyelven</li>
+        <li data-lang="en" style="display:none;">Simple project in Java</li>
+        <li data-lang="hu">Kreatív UI megvalósítása</li>
+        <li data-lang="en" style="display:none;">Creative UI implementation</li>
+      </ul>
+    </div>
+  </section>
 
-        <div class="job">
-          <h3>Java hallgatói projekt</h3>
-          <ul>
-            <li>Egyszerű projekt Java nyelven</li>
-            <li>Kreatív UI megvalósítása</li>
-          </ul>
-        </div>
-      </section>
+  <section class="cv-section card" id="education">
+    <h2><i class="fa-solid fa-graduation-cap"></i> <span data-lang="hu">Oktatás</span><span data-lang="en" style="display:none;">Education</span></h2>
+    <p data-lang="hu"><strong>UMFST Marosvásárhely</strong> – Informatika szak (2023 – jelenleg)</p>
+    <p data-lang="en" style="display:none;"><strong>UMFST Târgu Mureș</strong> – Computer Science (2023 – Present)</p>
+    <p data-lang="hu">Webfejlesztés, adatbázisok, valamint több programozási nyelv megismerése.</p>
+    <p data-lang="en" style="display:none;">Learning web development, databases, and multiple programming languages.</p>
+  </section>
 
-      <!-- tanulas -->
-      <section class="cv-section card" id="education">
-        <h2><i class="fa-solid fa-graduation-cap"></i> Oktatás</h2>
-        <p><strong>UMFST Marosvásárhely</strong> – Informatika szak (2023 – jelenleg)</p>
-        <p>Webfejlesztés, adatbázisok, valamint több programozási nyelv megismerése.</p>
-      </section>
+  <section class="cv-section card" id="skills">
+    <h2><i class="fa-solid fa-code"></i> <span data-lang="hu">Készségek</span><span data-lang="en" style="display:none;">Skills</span></h2>
+    <div class="skills">
+      <span class="chip">C</span>
+      <span class="chip">C++</span>
+      <span class="chip">C#</span>
+      <span class="chip">Java</span>
+      <span class="chip">Laravel</span>
+      <span class="chip">HTML</span>
+      <span class="chip">CSS</span>
+      <span class="chip">JavaScript</span>
+      <span class="chip">Flutter</span>
+    </div>
+  </section>
 
-      <!-- nyelvi ismeretek -->
-      <section class="cv-section card" id="skills">
-        <h2><i class="fa-solid fa-code"></i> Készségek</h2>
-        <div class="skills">
-          <span class="chip">C</span>
-          <span class="chip">C++</span>
-          <span class="chip">C#</span>
-          <span class="chip">Java</span>
-          <span class="chip">Laravel</span>
-          <span class="chip">HTML</span>
-          <span class="chip">CSS</span>
-          <span class="chip">JavaScript</span>
-          <span class="chip">Flutter</span>
-        </div>
-      </section>
+  <section class="cv-section card" id="hobbies">
+    <h2><i class="fa-solid fa-heart"></i> <span data-lang="hu">Hobbik</span><span data-lang="en" style="display:none;">Hobbies</span></h2>
+    <div class="hobby-cards">
+      <div class="hobby-card"><i class="fa-solid fa-paintbrush"></i> Rajzolás</div>
+      <div class="hobby-card"><i class="fa-solid fa-palette"></i> Színezés</div>
+      <div class="hobby-card"><i class="fa-solid fa-code"></i> CSS kísérletezés</div>
+      <div class="hobby-card"><i class="fa-solid fa-cookie-bite"></i> Sütés</div>
+      <div class="hobby-card"><i class="fa-solid fa-utensils"></i> Főzés</div>
+    </div>
+  </section>
 
-      <!-- hobbik -->
-      <section class="cv-section card" id="hobbies">
-        <h2><i class="fa-solid fa-heart"></i> Hobbik</h2>
-        <div class="hobbies">
-          <span class="hobby-chip"><i class="fa-solid fa-paintbrush"></i> Rajzolás</span>
-          <span class="hobby-chip"><i class="fa-solid fa-palette"></i> Színezés</span>
-          <span class="hobby-chip"><i class="fa-solid fa-cookie-bite"></i> Sütés</span>
-          <span class="hobby-chip"><i class="fa-solid fa-utensils"></i> Főzés</span>
-          <span class="hobby-chip"><i class="fa-solid fa-code"></i> CSS-el kísérletezés</span>
-        </div>
-      </section>
+  <section class="cv-section card" id="contact">
+    <h2><i class="fa-solid fa-envelope-open-text"></i> <span data-lang="hu">Kapcsolat</span><span data-lang="en" style="display:none;">Contact</span></h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Név" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Üzenet" required></textarea>
+      <button type="submit" data-lang="hu">Küldés</button>
+      <button type="submit" data-lang="en" style="display:none;">Send</button>
+      <p id="form-msg"></p>
+    </form>
+  </section>
 
-      <!-- kapcsolat felvetel -->
-      <section class="cv-section card" id="contact">
-        <h2><i class="fa-solid fa-envelope-open-text"></i> Kapcsolat</h2>
-        <p>
-          <i class="fa-solid fa-envelope"></i>
-          Email: <a href="mailto:dalibrigitta3@gmail.com" target="_blank" rel="noopener">dalibrigitta3@gmail.com</a>
-        </p>
-        <p>
-          <i class="fa-brands fa-github"></i>
-          Github: <a href="https://github.com/dalibrigitta" target="_blank" rel="noopener">github.com/dalibrigitta</a>
-        </p>
-      </section>
+</main>
 
-    </main>
-  </body>
+<script src="script.js"></script>
+</body>
 </html>
