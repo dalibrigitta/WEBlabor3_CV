@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dali Brigitta Renáta - Portfólió / CV</title>
-<meta name="description" content="Dali Brigitta Renáta portfólió és önéletrajz – Informatika szakos hallgató, tapasztalat Laravel, Flutter, HTML, CSS, JavaScript terén.">
-<meta name="color-scheme" content="dark">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dali Brigitta Renáta - Portfólió / CV</title>
+  <meta name="description" content="Dali Brigitta Renáta portfólió és önéletrajz – Informatika szakos hallgató, tapasztalat Laravel, Flutter, HTML, CSS, JavaScript terén.">
+  <meta name="color-scheme" content="dark">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -46,6 +46,7 @@
 
 <main id="app" role="main">
 
+  <!-- PROFIL -->
   <section class="profile-card card" id="profile">
     <img class="avatar" src="profile.jpg" alt="Profilkép">
     <div class="meta">
@@ -63,14 +64,22 @@
     </div>
   </section>
 
+  <!-- BEMUTATKOZÁS -->
   <section class="cv-section card" id="about">
-    <h2><i class="fa-solid fa-user"></i> <span data-lang="hu">Bemutatkozás</span><span data-lang="en" style="display:none;">About Me</span></h2>
+    <h2><i class="fa-solid fa-user"></i>
+      <span data-lang="hu">Bemutatkozás</span>
+      <span data-lang="en" style="display:none;">About Me</span>
+    </h2>
     <p data-lang="hu">Harmadéves Informatika szakos hallgató vagyok az UMFST egyetemen Marosvásárhelyen. Szeretem a webfejlesztést és kísérletezni a CSS-sel, hogy egyedi, látványos felületeket hozzak létre.</p>
     <p data-lang="en" style="display:none;">I am a third-year Computer Science student at UMFST, Târgu Mureș. I enjoy web development and experimenting with CSS to create unique, visually appealing interfaces.</p>
   </section>
 
+  <!-- TAPASZTALAT -->
   <section class="cv-section card" id="experience">
-    <h2><i class="fa-solid fa-briefcase"></i> <span data-lang="hu">Tapasztalat</span><span data-lang="en" style="display:none;">Experience</span></h2>
+    <h2><i class="fa-solid fa-briefcase"></i>
+      <span data-lang="hu">Tapasztalat</span>
+      <span data-lang="en" style="display:none;">Experience</span>
+    </h2>
 
     <div class="job">
       <h3 data-lang="hu">Webfejlesztő gyakornok - Erasmus+ program</h3>
@@ -106,16 +115,24 @@
     </div>
   </section>
 
+  <!-- OKTATÁS -->
   <section class="cv-section card" id="education">
-    <h2><i class="fa-solid fa-graduation-cap"></i> <span data-lang="hu">Oktatás</span><span data-lang="en" style="display:none;">Education</span></h2>
+    <h2><i class="fa-solid fa-graduation-cap"></i>
+      <span data-lang="hu">Oktatás</span>
+      <span data-lang="en" style="display:none;">Education</span>
+    </h2>
     <p data-lang="hu"><strong>UMFST Marosvásárhely</strong> – Informatika szak (2023 – jelenleg)</p>
     <p data-lang="en" style="display:none;"><strong>UMFST Târgu Mureș</strong> – Computer Science (2023 – Present)</p>
     <p data-lang="hu">Webfejlesztés, adatbázisok, valamint több programozási nyelv megismerése.</p>
     <p data-lang="en" style="display:none;">Learning web development, databases, and multiple programming languages.</p>
   </section>
 
+  <!-- KÉSZSÉGEK -->
   <section class="cv-section card" id="skills">
-    <h2><i class="fa-solid fa-code"></i> <span data-lang="hu">Készségek</span><span data-lang="en" style="display:none;">Skills</span></h2>
+    <h2><i class="fa-solid fa-code"></i>
+      <span data-lang="hu">Készségek</span>
+      <span data-lang="en" style="display:none;">Skills</span>
+    </h2>
     <div class="skills">
       <span class="chip">C</span>
       <span class="chip">C++</span>
@@ -129,19 +146,50 @@
     </div>
   </section>
 
+     <!-- HOBBIES -->
   <section class="cv-section card" id="hobbies">
-    <h2><i class="fa-solid fa-heart"></i> <span data-lang="hu">Hobbik</span><span data-lang="en" style="display:none;">Hobbies</span></h2>
+    <h2><i class="fa-solid fa-heart"></i>
+      <span data-lang="hu">Hobbik</span>
+      <span data-lang="en" style="display:none;">Hobbies</span>
+    </h2>
     <div class="hobby-cards">
-      <div class="hobby-card"><i class="fa-solid fa-paintbrush"></i> Rajzolás</div>
-      <div class="hobby-card"><i class="fa-solid fa-palette"></i> Színezés</div>
       <div class="hobby-card"><i class="fa-solid fa-code"></i> CSS kísérletezés</div>
+      <div class="hobby-card"><i class="fa-solid fa-paintbrush"></i> Rajzolás</div>
       <div class="hobby-card"><i class="fa-solid fa-cookie-bite"></i> Sütés</div>
-      <div class="hobby-card"><i class="fa-solid fa-utensils"></i> Főzés</div>
+    </div>
+
+    <div class="hobby-gallery-btn">
+      <button id="openGallery"><i class="fa-solid fa-laptop-code"></i> CSS projekt megnyitása</button>
     </div>
   </section>
 
+  <!-- 💻 MODAL: CSS projekt bemutató -->
+  <div class="hobby-modal" id="hobbyModal">
+    <div class="hobby-modal-content">
+      <span class="closeModal">&times;</span>
+      <h3>CSS projektbemutató</h3>
+      <p class="css-desc">
+        Ez egy saját készítésű CSS-projektem, ahol különböző animációkkal, áttetsző elemekkel és
+        színátmenetekkel kísérleteztem. Az a célom, hogy vizuálisan izgalmas, modern webes felületeket hozzak létre.
+      </p>
+
+      <div class="carousel">
+        <div class="slides">
+          <img src="kviz1.png" alt="CSS projekt előnézet 1">
+          <img src="kviz2.png" alt="CSS projekt előnézet 2">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- KAPCSOLAT -->
   <section class="cv-section card" id="contact">
-    <h2><i class="fa-solid fa-envelope-open-text"></i> <span data-lang="hu">Kapcsolat</span><span data-lang="en" style="display:none;">Contact</span></h2>
+    <h2><i class="fa-solid fa-envelope-open-text"></i>
+      <span data-lang="hu">Kapcsolat</span>
+      <span data-lang="en" style="display:none;">Contact</span>
+    </h2>
     <form id="contact-form">
       <input type="text" name="name" placeholder="Név" required>
       <input type="email" name="email" placeholder="Email" required>
