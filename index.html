@@ -146,43 +146,44 @@
     </div>
   </section>
 
-     <!-- HOBBIES -->
+  <!-- HOBBIES -->
   <section class="cv-section card" id="hobbies">
     <h2><i class="fa-solid fa-heart"></i>
       <span data-lang="hu">Hobbik</span>
       <span data-lang="en" style="display:none;">Hobbies</span>
     </h2>
     <div class="hobby-cards">
-      <div class="hobby-card"><i class="fa-solid fa-code"></i> CSS kísérletezés</div>
-      <div class="hobby-card"><i class="fa-solid fa-paintbrush"></i> Rajzolás</div>
-      <div class="hobby-card"><i class="fa-solid fa-cookie-bite"></i> Sütés</div>
+      <div class="hobby-card" data-lang="hu"><i class="fa-solid fa-code"></i> CSS kísérletezés</div>
+      <div class="hobby-card" data-lang="hu"><i class="fa-solid fa-paintbrush"></i> Rajzolás</div>
+      <div class="hobby-card" data-lang="hu"><i class="fa-solid fa-cookie-bite"></i> Sütés</div>
+
+      <div class="hobby-card" data-lang="en" style="display:none;"><i class="fa-solid fa-code"></i> CSS experiments</div>
+      <div class="hobby-card" data-lang="en" style="display:none;"><i class="fa-solid fa-paintbrush"></i> Drawing</div>
+      <div class="hobby-card" data-lang="en" style="display:none;"><i class="fa-solid fa-cookie-bite"></i> Baking</div>
     </div>
 
     <div class="hobby-gallery-btn">
-      <button id="openGallery"><i class="fa-solid fa-laptop-code"></i> CSS projekt megnyitása</button>
+      <button id="openGallery" data-lang="hu"><i class="fa-solid fa-laptop-code"></i> CSS projekt megnyitása</button>
+      <button id="openGallery" data-lang="en" style="display:none;"><i class="fa-solid fa-laptop-code"></i> Open CSS project</button>
     </div>
   </section>
 
-  <!-- 💻 MODAL: CSS projekt bemutató -->
+  <!-- MODAL: CSS projektek -->
   <div class="hobby-modal" id="hobbyModal">
     <div class="hobby-modal-content">
       <span class="closeModal">&times;</span>
-      <h3>CSS projektbemutató</h3>
-      <p class="css-desc">
-        Ez egy saját készítésű CSS-projektem, ahol különböző animációkkal, áttetsző elemekkel és
-        színátmenetekkel kísérleteztem. Az a célom, hogy vizuálisan izgalmas, modern webes felületeket hozzak létre.
-      </p>
-
+      <h3 data-lang="hu">CSS projektek</h3>
+      <h3 data-lang="en" style="display:none;">CSS Projects</h3>
       <div class="carousel">
         <div class="slides">
-          <img src="kviz1.png" alt="CSS projekt előnézet 1">
-          <img src="kviz2.png" alt="CSS projekt előnézet 2">
-          
+          <img src="kviz1.png" alt="CSS projekt 1">
+          <img src="kviz2.png" alt="CSS projekt 2">
+          <img src="kviz3.png" alt="CSS projekt 3">
+       
         </div>
       </div>
     </div>
   </div>
-
 
   <!-- KAPCSOLAT -->
   <section class="cv-section card" id="contact">
@@ -191,11 +192,18 @@
       <span data-lang="en" style="display:none;">Contact</span>
     </h2>
     <form id="contact-form">
-      <input type="text" name="name" placeholder="Név" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Üzenet" required></textarea>
+      <input type="text" name="name" data-lang="hu" placeholder="Név" required>
+      <input type="text" name="name" data-lang="en" placeholder="Name" style="display:none;" required>
+
+      <input type="email" name="email" data-lang="hu" placeholder="Email" required>
+      <input type="email" name="email" data-lang="en" placeholder="Email" style="display:none;" required>
+
+      <textarea name="message" data-lang="hu" placeholder="Üzenet" required></textarea>
+      <textarea name="message" data-lang="en" placeholder="Message" style="display:none;" required></textarea>
+
       <button type="submit" data-lang="hu">Küldés</button>
       <button type="submit" data-lang="en" style="display:none;">Send</button>
+
       <p id="form-msg"></p>
     </form>
   </section>
