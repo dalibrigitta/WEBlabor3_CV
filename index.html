@@ -45,7 +45,6 @@
 </header>
 
 <main id="app" role="main">
-
   <!-- PROFIL -->
   <section class="profile-card card" id="profile">
     <img class="avatar" src="profile.jpg" alt="Profilkép">
@@ -80,7 +79,6 @@
       <span data-lang="hu">Tapasztalat</span>
       <span data-lang="en" style="display:none;">Experience</span>
     </h2>
-
     <div class="job">
       <h3 data-lang="hu">Webfejlesztő gyakornok - Erasmus+ program</h3>
       <h3 data-lang="en" style="display:none;">Web Development Intern - Erasmus+ Program</h3>
@@ -91,7 +89,6 @@
         <li data-lang="en" style="display:none;">Frontend development using HTML, CSS and minimal JavaScript</li>
       </ul>
     </div>
-
     <div class="job">
       <h3 data-lang="hu">Mobilos hallgatói projekt - Flutter</h3>
       <h3 data-lang="en" style="display:none;">Student Mobile Project - Flutter</h3>
@@ -102,7 +99,6 @@
         <li data-lang="en" style="display:none;">UI design and component customization</li>
       </ul>
     </div>
-
     <div class="job">
       <h3 data-lang="hu">Java hallgatói projekt</h3>
       <h3 data-lang="en" style="display:none;">Student Java Project</h3>
@@ -163,12 +159,12 @@
     </div>
 
     <div class="hobby-gallery-btn">
-      <button id="openGallery" data-lang="hu"><i class="fa-solid fa-laptop-code"></i> CSS projekt megnyitása</button>
-      <button id="openGallery" data-lang="en" style="display:none;"><i class="fa-solid fa-laptop-code"></i> Open CSS project</button>
+      <button id="openGalleryHU" data-lang="hu"><i class="fa-solid fa-laptop-code"></i> CSS projekt megnyitása</button>
+      <button id="openGalleryEN" data-lang="en" style="display:none;"><i class="fa-solid fa-laptop-code"></i> Open CSS project</button>
     </div>
   </section>
 
-  <!-- MODAL: CSS projektek -->
+  <!-- MODAL -->
   <div class="hobby-modal" id="hobbyModal">
     <div class="hobby-modal-content">
       <span class="closeModal">&times;</span>
@@ -179,7 +175,6 @@
           <img src="kviz1.png" alt="CSS projekt 1">
           <img src="kviz2.png" alt="CSS projekt 2">
           <img src="kviz3.png" alt="CSS projekt 3">
-       
         </div>
       </div>
     </div>
@@ -192,18 +187,24 @@
       <span data-lang="en" style="display:none;">Contact</span>
     </h2>
     <form id="contact-form">
-      <input type="text" name="name" data-lang="hu" placeholder="Név" required>
-      <input type="text" name="name" data-lang="en" placeholder="Name" style="display:none;" required>
+      <input type="text" name="name" id="nameHU" data-lang="hu" placeholder="Név" required>
+      <input type="text" name="name" id="nameEN" data-lang="en" placeholder="Name" style="display:none;" required>
 
-      <input type="email" name="email" data-lang="hu" placeholder="Email" required>
-      <input type="email" name="email" data-lang="en" placeholder="Email" style="display:none;" required>
+      <input type="email" name="email" id="emailHU" data-lang="hu" placeholder="Email" required>
+      <input type="email" name="email" id="emailEN" data-lang="en" placeholder="Email" style="display:none;" required>
 
-      <textarea name="message" data-lang="hu" placeholder="Üzenet" required></textarea>
-      <textarea name="message" data-lang="en" placeholder="Message" style="display:none;" required></textarea>
+      <textarea name="message" id="messageHU" data-lang="hu" placeholder="Üzenet" required></textarea>
+      <textarea name="message" id="messageEN" data-lang="en" placeholder="Message" style="display:none;" required></textarea>
 
-      <button type="submit" data-lang="hu">Küldés</button>
-      <button type="submit" data-lang="en" style="display:none;">Send</button>
+      <div class="captcha-box">
+        <label for="captchaHU" data-lang="hu">Másold be az alábbi kódot:</label>
+        <label for="captchaEN" data-lang="en" style="display:none;">Please copy the text below:</label>
+        <div class="captcha-text" id="captchaText">ABC123</div>
+        <input type="text" id="captchaHU" name="captchaInputHU" data-lang="hu" placeholder="Ide írd a kódot" required>
+        <input type="text" id="captchaEN" name="captchaInputEN" data-lang="en" placeholder="Enter the code here" style="display: none;"  required>
+      </div>
 
+      <button type="submit" id="submitBtn">Küldés</button>
       <p id="form-msg"></p>
     </form>
   </section>
