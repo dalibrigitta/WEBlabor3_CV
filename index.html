@@ -20,19 +20,14 @@
     <nav role="navigation" class="main-nav" aria-label="Fő navigáció">
       <a href="#about" data-lang="hu">Bemutatkozás</a>
       <a href="#about" data-lang="en" style="display:none;">About Me</a>
-
       <a href="#experience" data-lang="hu">Tapasztalat</a>
       <a href="#experience" data-lang="en" style="display:none;">Experience</a>
-
       <a href="#education" data-lang="hu">Oktatás</a>
       <a href="#education" data-lang="en" style="display:none;">Education</a>
-
       <a href="#skills" data-lang="hu">Készségek</a>
       <a href="#skills" data-lang="en" style="display:none;">Skills</a>
-
       <a href="#hobbies" data-lang="hu">Hobbik</a>
       <a href="#hobbies" data-lang="en" style="display:none;">Hobbies</a>
-
       <a href="#contact" data-lang="hu">Kapcsolat</a>
       <a href="#contact" data-lang="en" style="display:none;">Contact</a>
     </nav>
@@ -187,21 +182,21 @@
       <span data-lang="en" style="display:none;">Contact</span>
     </h2>
     <form id="contact-form">
-      <input type="text" name="name" id="nameHU" data-lang="hu" placeholder="Név" required>
-      <input type="text" name="name" id="nameEN" data-lang="en" placeholder="Name" style="display:none;" required>
+      <input type="text" name="nameHU" id="nameHU" data-lang="hu" placeholder="Név" required>
+      <input type="text" name="nameEN" id="nameEN" data-lang="en" placeholder="Name" style="display:none;" required>
 
-      <input type="email" name="email" id="emailHU" data-lang="hu" placeholder="Email" required>
-      <input type="email" name="email" id="emailEN" data-lang="en" placeholder="Email" style="display:none;" required>
+      <input type="email" name="emailHU" id="emailHU" data-lang="hu" placeholder="Email" required>
+      <input type="email" name="emailEN" id="emailEN" data-lang="en" placeholder="Email" style="display:none;" required>
 
-      <textarea name="message" id="messageHU" data-lang="hu" placeholder="Üzenet" required></textarea>
-      <textarea name="message" id="messageEN" data-lang="en" placeholder="Message" style="display:none;" required></textarea>
+      <textarea name="messageHU" id="messageHU" data-lang="hu" placeholder="Üzenet" required></textarea>
+      <textarea name="messageEN" id="messageEN" data-lang="en" placeholder="Message" style="display:none;" required></textarea>
 
       <div class="captcha-box">
         <label for="captchaHU" data-lang="hu">Másold be az alábbi kódot:</label>
         <label for="captchaEN" data-lang="en" style="display:none;">Please copy the text below:</label>
         <div class="captcha-text" id="captchaText">ABC123</div>
-        <input type="text" id="captchaHU" name="captchaInputHU" data-lang="hu" placeholder="Ide írd a kódot" required>
-        <input type="text" id="captchaEN" name="captchaInputEN" data-lang="en" placeholder="Enter the code here" style="display: none;"  required>
+        <input type="text" id="captchaHU" name="captchaHU" data-lang="hu" placeholder="Ide írd a kódot" required>
+        <input type="text" id="captchaEN" name="captchaEN" data-lang="en" placeholder="Enter the code here" style="display:none;" required>
       </div>
 
       <button type="submit" id="submitBtn">Küldés</button>
@@ -211,6 +206,8 @@
 
 </main>
 
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
