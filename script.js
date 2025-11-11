@@ -1,6 +1,4 @@
-// ===========================
-// 🌍 Nyelvváltás modul
-// ===========================
+//NYELV VLATAS
 document.addEventListener("DOMContentLoaded", () => {
   const huBtn = document.getElementById("lang-hu");
   const enBtn = document.getElementById("lang-en");
@@ -14,9 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
   function setLanguage(lang) {
     Object.keys(langElements).forEach(l => {
       langElements[l].forEach(el => {
-        el.style.display = l === lang ? "" : "none";
+        
+        if (el.tagName === "INPUT" || el.tagName === "TEXTAREA" || el.tagName === "SELECT") {
+          el.style.display = l === lang ? "block" : "none";
+        } else {
+          el.style.display = l === lang ? "" : "none";
+        }
 
-        // Required attribútum csak az aktuális nyelvű mezőkön legyen
+        
         if (["INPUT", "TEXTAREA", "SELECT"].includes(el.tagName)) {
           if (l === lang) {
             el.setAttribute("required", "true");
@@ -36,14 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add(`lang-${lang}`);
   }
 
-  // Nyelvváltás gombok
+
   huBtn.addEventListener("click", () => setLanguage("hu"));
   enBtn.addEventListener("click", () => setLanguage("en"));
-  setLanguage("hu"); // alapértelmezett
+  setLanguage("hu"); 
 
-  // ===========================
-  // 🎨 Modal modul
-  // ===========================
+
   const modal = document.getElementById("hobbyModal");
   ["openGalleryHU", "openGalleryEN"].forEach(id => {
     const btn = document.getElementById(id);
@@ -55,14 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target === modal) modal.style.display = "none";
   });
 
-  // ===========================
-  // 🔐 CAPTCHA modul
-  // ===========================
+
   const captchaTextEl = document.getElementById("captchaText");
-  const captchaInputs = {
-    hu: document.getElementById("captchaHU"),
-    en: document.getElementById("captchaEN")
-  };
 
   function generateCaptcha() {
     const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
@@ -72,9 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   generateCaptcha();
 
-  // ===========================
-  // ✅ Popup modul
-  // ===========================
+
   function showPopup(msg) {
     const existing = document.getElementById("successPopup");
     if (existing) existing.remove();
@@ -111,11 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000);
   }
 
-  // ===========================
-  // 📝 Form + EmailJS modul
-  // ===========================
-  emailjs.init("pu3HMUawn40PINzX6"); // a te public key-ed
-
+  
   const form = document.getElementById("contact-form");
   const formMsg = document.getElementById("form-msg");
 
@@ -123,43 +112,28 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
 
     const lang = document.body.classList.contains("lang-hu") ? "hu" : "en";
-    const entered = captchaInputs[lang].value.trim();
+    const captchaInput = document.getElementById(`captcha${lang.toUpperCase()}`);
+    const entered = captchaInput.value.trim();
     const expected = captchaTextEl.textContent.trim();
 
     if (entered !== expected) {
       formMsg.style.color = "red";
       formMsg.textContent = lang === "hu" ? "Hibás kód! Próbáld újra." : "Incorrect code! Try again.";
-      captchaInputs[lang].value = "";
+      captchaInput.value = "";
       generateCaptcha();
       return;
     }
 
-    const templateParams = {
-      from_name: lang === "hu" ? document.getElementById("nameHU").value : document.getElementById("nameEN").value,
-      from_email: lang === "hu" ? document.getElementById("emailHU").value : document.getElementById("emailEN").value,
-      message: lang === "hu" ? document.getElementById("messageHU").value : document.getElementById("messageEN").value
-    };
+    const now = new Date().toLocaleString();
+    const msg = lang === "hu"
+      ? `Üzenet sikeresen elküldve! 🎉 Időpont: ${now}`
+      : `Message sent successfully! 🎉 Time: ${now}`;
 
-    formMsg.style.color = "blue";
-    formMsg.textContent = lang === "hu" ? "Küldés folyamatban..." : "Sending...";
+    formMsg.style.color = "lightgreen";
+    formMsg.textContent = msg;
+    showPopup(msg);
 
-    emailjs.send("service_vf3grpm", "template_vxj6xsg", templateParams)
-      .then(response => {
-        console.log("✅ EmailJS Response:", response);
-        const now = new Date().toLocaleString();
-        const msg = lang === "hu" ? `Üzenet sikeresen elküldve! 🎉 Időpont: ${now}` : `Message sent successfully! 🎉 Time: ${now}`;
-        formMsg.style.color = "lightgreen";
-        formMsg.textContent = msg;
-        showPopup(msg);
-        form.reset();
-        generateCaptcha();
-      })
-      .catch(error => {
-        console.error("❌ EmailJS Error:", error);
-        formMsg.style.color = "red";
-        formMsg.textContent = lang === "hu"
-          ? "Hiba az üzenet küldésekor. Próbáld újra!"
-          : "Failed to send message. Please try again.";
-      });
+    form.reset();
+    generateCaptcha();
   });
 });
